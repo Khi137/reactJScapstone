@@ -56,12 +56,12 @@ export default function UserNavLoginMobile({ infoUser }) {
               <div className="pt-1 text-xl  text-[#C6C7CC]  font-bold">
                 {infoUser.hoTen}
               </div>
-              <div className="text-[#ACAFB4]">Xem thông tin cá nhân</div>
+              <div className="text-[#ACAFB4]">Xem thông tin tài khoản</div>
             </div>
           </div>
           <hr className=" bg-gray-300" />
         </div>
-        {/* // Lịch sử mua vé  */}
+        {/* // Lịch sử đặt vé  */}
         <div
           onClick={() => {
             navigate("/user/history");
@@ -69,7 +69,7 @@ export default function UserNavLoginMobile({ infoUser }) {
           className="flex items-center space-x-2 py-3 px-2 mt-2 hover:bg-[#3A3B3C] transition rounded-lg cursor-pointer"
         >
           <HistoryOutlined className="p-2 leading-7 text-xl  text-white text-center  bg-[#4E4F50] rounded-full" />{" "}
-          <span className=" text-lg text-[#C6C7CC] ">Lịch sử mua vé</span>
+          <span className=" text-lg text-[#C6C7CC] ">Lịch sử đặt vé</span>
         </div>
         {/* // LogOut  */}
         <div

@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AuthTemplate from "./templates/AuthTemplate";
+import AuthenticateTemplate from "./templates/AuthenticateTemplate";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import HomeTemplate from "./templates/HomeTemplate";
 import HomePage from "./pages/HomePage/HomePage";
@@ -11,8 +11,7 @@ import RegisterPage from "../src/pages/RegisterPage/RegisterPage";
 import CheckUser from "./HOC/CheckUser";
 
 import AdminTemplate from "./templates/AdminTemplate";
-// import AdminPage from "./pages/AdminPage/AdminPage";
-import AddFlims from "./pages/AdminPage/Films/AddFlims";
+import AddMovie from "./pages/AdminPage/Films/AddMovie";
 import Films from "./pages/AdminPage/Films/Films";
 
 import ScreenPage from "./pages/ScreenPage/ScreenPage";
@@ -27,7 +26,7 @@ function App() {
       <Loading />
 
       <Routes>
-        {/* home template */}
+        {/* home  */}
         <Route path="" element={<HomeTemplate />}>
           <Route index element={<HomePage />} />
           <Route path="detail-movie/:idMovie" element={<DetailPage />} />
@@ -40,22 +39,22 @@ function App() {
             }
           />
 
-          {/* Page not found */}
+          {/* Page 404 */}
           <Route path="*" element={<Page404 />}></Route>
         </Route>
-        {/* auth template */}
-        <Route path="auth" element={<AuthTemplate />}>
+        {/* auth  */}
+        <Route path="auth" element={<AuthenticateTemplate />}>
           <Route path="login" element={<LoginPage />} />
           <Route path="register" element={<RegisterPage />}></Route>
         </Route>
 
-        {/* admin template */}
+        {/* admin  */}
         <Route path="/admin" element={<AdminTemplate />}>
-          <Route path="movies" element={<Films />} />
-          <Route path="addMovies" element={<AddFlims />} />
+          <Route path="movie-manager" element={<Films />} />
+          <Route path="add-movie" element={<AddMovie />} />
         </Route>
 
-        {/* User template */}
+        {/* User */}
         <Route path="user" element={<UserTemplate />}>
           <Route path="history" element={<HistoryBooking />} />
           <Route path="info" element={<UserInfoPage />} />

@@ -12,14 +12,14 @@ const Films = () => {
   const fetchMovieData = async () => {
     try {
       const data = await movieSer.getListMovies();
-      console.log("😢 ~ data", data);
+
 
       const newData = data.data.content;
-      console.log("😢 ~ newData", newData);
+  
 
       setDataMovie(newData);
     } catch (error) {
-      console.log("😢 ~ error", error);
+
     }
   };
 

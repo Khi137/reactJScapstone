@@ -2,16 +2,18 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { message } from "antd";
 import { userSer } from "../../service/userSer";
 import { userLocal } from "../../service/localService";
-
+import { saveLocalStorage } from "../../utils/index";
 export const loginThunk = createAsyncThunk(
   "userReducer/loginThunk",
   async (payload, { rejectWithValue }) => {
     try {
-      const data = await userSer.postLogin(payload.value);
-      let infoUser = data.data.content;
+      const res = await userSer.postLogin(payload.value);
+      let infoUser = res.data.content;
       payload.navigateCus();
       userLocal.set(infoUser);
       message.success("Đăng nhập thành công");
+       // lưu trữ dữ liệu xuống localstorage để lưu trữ
+       saveLocalStorage("user", res.data.content);
       return infoUser;
     } catch (error) {
       message.error("Tài khoản hoặc mật khẩu không đúng");

@@ -33,5 +33,8 @@ export const movieSer = {
     let uri = "/api/QuanLyDatVe/DatVe";
     return http.post(uri, data);
   },
-
+  postMovieUploadImage:(data)=>{
+    let uri ="api/QuanLyPhim/ThemPhimUploadHinh";
+    return http.post(uri,data);
+  },
 };

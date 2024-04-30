@@ -21,6 +21,7 @@ const LoginPage = () => {
       isLogin: true
     },
     onSubmit: (value) => {
+      
       const navigateCus = () => {
         navigate("/");
       };

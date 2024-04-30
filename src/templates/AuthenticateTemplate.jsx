@@ -3,7 +3,7 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 
-const AuthTemplate = () => {
+const AuthenticateTemplate = () => {
   const { infoUser } = useSelector((state) => state.userReducer),
     navigate = useNavigate();
 
@@ -22,4 +22,4 @@ const AuthTemplate = () => {
   );
 };
 
-export default AuthTemplate;
+export default AuthenticateTemplate;

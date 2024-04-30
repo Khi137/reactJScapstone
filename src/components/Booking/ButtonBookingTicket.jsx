@@ -134,10 +134,10 @@ export default function ButtonBookingTicket(props) {
             <h1 className="text-6xl text-center mt-14 text-blue-700 font-extrabold ">
               Cinema
             </h1>
-            <p className="text-gray-400 text-xl  break-normal w-max mx-auto">
+            <p className="text-red-500 font-bold text-xl  break-normal w-max mx-auto">
               Bạn cần đăng nhập để  <br /> tiếp tục sử dụng dịch vụ
             </p>
-            <p className="font-bold text-gray-400 text-2xl break-normal w-max mx-auto">
+            <p className="font-bold text-red-500 text-2xl break-normal w-max mx-auto">
               {props.tenPhim}
             </p>
             <button
